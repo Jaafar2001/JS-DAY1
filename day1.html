@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-DAY1</title>
+</head>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+
+        #name{
+            font-size: 50px;
+            font-style: italic;
+        }
+
+        #yourinput{
+            width: 50%;
+            height: 30%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        #mybtn{
+            width: 50%;
+            height: 50%;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width:769px){
+            .container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+            }
+        }
+    </style>
+<body>
+    <div class="container">
+    <p>you will archieve your goals <span id="name"></span></p>
+
+    <input type="text" placeholder="type your name" id="yourinput">
+    <button id="mybtn" type="button">send</button>
+    </div>
+    
+</body>
+
+<script>
+    // 1. capture the user input
+   let mycapture = document.getElementById('yourinput');
+
+   let mysend = document.getElementById('mybtn');
+
+   mysend.addEventListener("click", function() {
+
+    let capturedValue = mycapture.value;
+    
+
+    let username = document.getElementById('name');
+    username.textContent = capturedValue;
+   });
+
+</script>
+</html>
